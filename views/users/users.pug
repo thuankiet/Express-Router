@@ -1,0 +1,23 @@
+h1 User: #{users[0].name}
+
+h2 Thư viện
+ul
+  each book in books
+    li
+      span= book.title
+
+form(action="/users", method="POST")
+  input(type="text", name="bookName", placeholder="Nhập tên sách")
+  button(type="submit") Thuê
+
+h2 Danh sách thuê
+ul
+  each user in users
+    each book in user.bookName
+      li
+        span= book.book
+        span &nbsp
+        a(href="/users/edit-form/"+book.id, style="background-color:dodgerblue; text-decoration:none; color:white") Chỉnh sửa 
+        span &nbsp
+        a(href="/users/delete/"+book.id, style="background-color:red; text-decoration:none; color:white") Xóa
+        

@@ -1,0 +1,16 @@
+h1 Books
+a(href="/") Create new book
+
+ul
+  each book in books
+    li
+      span= book.title
+      span &nbsp
+      span= "-"
+      span &nbsp
+      span= book.description
+      span &nbsp
+      a(href="/books/edit-form/"+book.id style="background-color:dodgerblue; text-decoration:none; color:white") Chỉnh sửa
+      span &nbsp
+      a(href="/books/" + book.id + "/delete" style="background-color:red; text-decoration:none; color:white") Xóa
+    

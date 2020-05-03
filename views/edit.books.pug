@@ -1,0 +1,4 @@
+h1 Edit book
+  form(action="/books/edit/"+book.id, method="POST")
+    input(name="title", type="text", value=book.title)
+    button(type="submit") Update
