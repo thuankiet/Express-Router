@@ -1,0 +1,11 @@
+h1 #{book.book}
+
+h2 Thư viện
+ul
+  each booklibrary in books
+    li
+      span= booklibrary.title
+
+form(action="/users/edit/"+book.id, method="POST")
+    input(name="book", type="text", value=book.book)
+    button(type="submit") Sửa  
